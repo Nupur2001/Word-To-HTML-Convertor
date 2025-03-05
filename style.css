@@ -33,8 +33,11 @@ body {
   color: #1fc980;
 }
 .textareaContainers {
-  display: flex;
-  justify-content: space-evenly;
+  /* display: flex;
+  justify-content: space-evenly; */
+      justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: auto auto;
 }
 .textContainer1 .containerHeading,.textContainer2 .containerHeading{
     text-align: left;
@@ -45,6 +48,8 @@ textarea {
   width: 40vw;
   height: 500px;
   overflow: scroll;
+      font-size: 25px;
+        padding: 20px;
 }
 .iconContainer {
   align-items: center;
@@ -53,6 +58,7 @@ textarea {
   height: 15vh;
   padding: 15px;
   background-color: #eee;
+  border-radius: 10px 10px 0 0;
 }
 .iconContainer button {
   padding: 10px;
@@ -99,7 +105,52 @@ background-color: #1FC980;
 .switch input:checked+.slider::before{
     transform: translateX(26px);
 }
-/* .switch input:checked body{
-background-color: #272a30;
-    color: #888;
+body.lightmode {
+  background-color: #fff;
+}
+
+body.lightmode .containerHeading {
+  color: #222;
+}
+
+body.lightmode .iconContainer {
+  background-color: #eee;
+  border: 1px solid #eee;
+}
+
+body.lightmode .iconContainer button {
+  color: #222;
+}
+
+body.lightmode textarea {
+  background-color: white;
+  color: #222;
+}
+
+body.nightmode {
+  background-color: #222;
+}
+
+body.nightmode .containerHeading{
+  color: white;
+}
+body.nightmode .iconContainer{
+  background-color: #222;
+  border: 1px solid white;
+}
+body.nightmode .iconContainer button{
+  color: white;
+}
+body.nightmode textarea{
+    background-color: #222;
+      color: white;
+}
+
+
+
+
+/* 
+.switch input:not(:checked) body{
+  background-color:white ;
+  color: #000;
 } */
